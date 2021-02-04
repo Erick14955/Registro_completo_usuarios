@@ -61,6 +61,7 @@ namespace WindowsFormsApp1
             // 
             this.ConfirmClaveTextBox.Location = new System.Drawing.Point(413, 165);
             this.ConfirmClaveTextBox.Name = "ConfirmClaveTextBox";
+            this.ConfirmClaveTextBox.PasswordChar = '*';
             this.ConfirmClaveTextBox.Size = new System.Drawing.Size(144, 23);
             this.ConfirmClaveTextBox.TabIndex = 28;
             // 
@@ -125,6 +126,7 @@ namespace WindowsFormsApp1
             // 
             this.ClaveTextBox.Location = new System.Drawing.Point(84, 165);
             this.ClaveTextBox.Name = "ClaveTextBox";
+            this.ClaveTextBox.PasswordChar = '*';
             this.ClaveTextBox.Size = new System.Drawing.Size(158, 23);
             this.ClaveTextBox.TabIndex = 22;
             // 
