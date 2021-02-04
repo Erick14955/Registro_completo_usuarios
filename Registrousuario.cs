@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
                 return;
             usuario = Llenarinfo();
 
-            if (!UsuariosBLL.Existe(Convert.ToInt32(TextID.Text))){
+            if (!UsuariosBLL.Existe((int)IdNumericUpDown.Value)){
                 if (!ExisteEnLaBaseDeDatos())
                     paso = UsuariosBLL.Guardar(usuario);
                 else
@@ -55,14 +55,14 @@ namespace WindowsFormsApp1
 
         private bool ExisteEnLaBaseDeDatos()
         {
-            Usuarios usuarios = UsuariosBLL.Buscar(Convert.ToInt32(TextID.Text));
+            Usuarios usuarios = UsuariosBLL.Buscar((int)IdNumericUpDown.Value);
 
             return (usuarios != null);
         }
 
         private void Borrarcampos()
         {
-            TextID.Clear();
+            IdNumericUpDown.Value = 0;
             AliasTextBox.Clear();
             NombreTextBox.Clear();
             EmailTextBox.Clear();
@@ -75,7 +75,7 @@ namespace WindowsFormsApp1
 
         private void mostrarinfo(Usuarios usuarios)
         {
-            TextID.Text = Convert.ToString(usuarios.UsuarioID);
+            IdNumericUpDown.Value = usuarios.UsuarioID;
             NombreTextBox.Text = usuarios.Nombres;
             EmailTextBox.Text = usuarios.Email;
             AliasTextBox.Text = usuarios.Alias;
@@ -88,7 +88,7 @@ namespace WindowsFormsApp1
         private Usuarios Llenarinfo()
         {
             Usuarios usuarios = new Usuarios();
-            usuarios.UsuarioID = Convert.ToInt32(TextID.Text);
+            usuarios.UsuarioID = (int)IdNumericUpDown.Value;
             usuarios.Clave = ClaveTextBox.Text;
             usuarios.Email = EmailTextBox.Text;
             usuarios.Nombres = NombreTextBox.Text;
@@ -153,7 +153,7 @@ namespace WindowsFormsApp1
         {
             int id;
             Usuarios usuario = new Usuarios();
-            int.TryParse(TextID.Text, out id);
+            int.TryParse((int)IdNumericUpDown, out id);
 
             Borrarcampos();
 
@@ -180,7 +180,7 @@ namespace WindowsFormsApp1
             }
             usuario = Llenarinfo();
 
-            if (!UsuariosBLL.Existe(Convert.ToInt32(TextID.Text)))
+            if (!UsuariosBLL.Existe((int)IdNumericUpDown.Value))
             {
                 MessageBox.Show("Error al intentar modificar usuario, id no encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -211,12 +211,12 @@ namespace WindowsFormsApp1
         {
             Errores.Clear();
             int id;
-            int.TryParse(TextID.Text, out id);
+            int.TryParse((int)IdNumericUpDown.Value, out id);
             Borrarcampos();
             if (UsuariosBLL.Eliminar(id))
                 MessageBox.Show("Usuario eliminado correctamente", "Proceso exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-                Errores.SetError(TextID, "ID no existente");
+                Errores.SetError(IdNumericUpDown, "ID no existente");
         }
 
     }

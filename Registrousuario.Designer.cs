@@ -51,9 +51,10 @@ namespace WindowsFormsApp1
             this.BuscarButton = new System.Windows.Forms.Button();
             this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.labFecha = new System.Windows.Forms.Label();
-            this.TextID = new System.Windows.Forms.MaskedTextBox();
             this.Errores = new System.Windows.Forms.ErrorProvider(this.components);
+            this.IdNumericUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.Errores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // ConfirmClaveTextBox
@@ -131,7 +132,7 @@ namespace WindowsFormsApp1
             // 
             this.NombreTextBox.Location = new System.Drawing.Point(84, 125);
             this.NombreTextBox.Name = "NombreTextBox";
-            this.NombreTextBox.Size = new System.Drawing.Size(278, 23);
+            this.NombreTextBox.Size = new System.Drawing.Size(217, 23);
             this.NombreTextBox.TabIndex = 21;
             // 
             // AliasTextBox
@@ -173,7 +174,7 @@ namespace WindowsFormsApp1
             // 
             this.ActivoCheckBox.AutoSize = true;
             this.ActivoCheckBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ActivoCheckBox.Location = new System.Drawing.Point(413, 24);
+            this.ActivoCheckBox.Location = new System.Drawing.Point(303, 49);
             this.ActivoCheckBox.Name = "ActivoCheckBox";
             this.ActivoCheckBox.Size = new System.Drawing.Size(60, 19);
             this.ActivoCheckBox.TabIndex = 31;
@@ -192,7 +193,7 @@ namespace WindowsFormsApp1
             // NuevoButton
             // 
             this.NuevoButton.Image = ((System.Drawing.Image)(resources.GetObject("NuevoButton.Image")));
-            this.NuevoButton.Location = new System.Drawing.Point(77, 230);
+            this.NuevoButton.Location = new System.Drawing.Point(84, 230);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(107, 61);
             this.NuevoButton.TabIndex = 34;
@@ -204,7 +205,7 @@ namespace WindowsFormsApp1
             // GuardarButton
             // 
             this.GuardarButton.Image = ((System.Drawing.Image)(resources.GetObject("GuardarButton.Image")));
-            this.GuardarButton.Location = new System.Drawing.Point(218, 230);
+            this.GuardarButton.Location = new System.Drawing.Point(255, 230);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(107, 61);
             this.GuardarButton.TabIndex = 35;
@@ -216,7 +217,7 @@ namespace WindowsFormsApp1
             // EliminarButton
             // 
             this.EliminarButton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarButton.Image")));
-            this.EliminarButton.Location = new System.Drawing.Point(359, 230);
+            this.EliminarButton.Location = new System.Drawing.Point(428, 230);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(107, 61);
             this.EliminarButton.TabIndex = 36;
@@ -228,7 +229,7 @@ namespace WindowsFormsApp1
             // BuscarButton
             // 
             this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
-            this.BuscarButton.Location = new System.Drawing.Point(190, 49);
+            this.BuscarButton.Location = new System.Drawing.Point(158, 49);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(25, 25);
             this.BuscarButton.TabIndex = 38;
@@ -254,26 +255,25 @@ namespace WindowsFormsApp1
             this.labFecha.TabIndex = 40;
             this.labFecha.Text = "Fecha";
             // 
-            // TextID
-            // 
-            this.TextID.Location = new System.Drawing.Point(84, 50);
-            this.TextID.Mask = "99999";
-            this.TextID.Name = "TextID";
-            this.TextID.Size = new System.Drawing.Size(100, 23);
-            this.TextID.TabIndex = 41;
-            this.TextID.ValidatingType = typeof(int);
-            // 
             // Errores
             // 
             this.Errores.ContainerControl = this;
+            // 
+            // IdNumericUpDown
+            // 
+            this.IdNumericUpDown.Location = new System.Drawing.Point(84, 49);
+            this.IdNumericUpDown.Name = "IdNumericUpDown";
+            this.IdNumericUpDown.Size = new System.Drawing.Size(68, 23);
+            this.IdNumericUpDown.TabIndex = 42;
             // 
             // Registrousuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(634, 340);
-            this.Controls.Add(this.TextID);
+            this.Controls.Add(this.IdNumericUpDown);
             this.Controls.Add(this.labFecha);
             this.Controls.Add(this.FechaDateTimePicker);
             this.Controls.Add(this.BuscarButton);
@@ -299,6 +299,7 @@ namespace WindowsFormsApp1
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.Errores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,8 +326,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button BuscarButton;
         private System.Windows.Forms.DateTimePicker FechaDateTimePicker;
         private System.Windows.Forms.Label labFecha;
-        private System.Windows.Forms.MaskedTextBox TextID;
         private System.Windows.Forms.ErrorProvider Errores;
+        private System.Windows.Forms.NumericUpDown IdNumericUpDown;
     }
 }
 
