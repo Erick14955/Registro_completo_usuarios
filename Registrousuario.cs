@@ -56,7 +56,7 @@ namespace WindowsFormsApp1
             ActivoCheckBox.Checked = usuarios.Activo;
         }
 
-        private Usuarios Llenarinfo()
+        private Usuarios LlenarClase()
         {
             Usuarios usuarios = new Usuarios();
             usuarios.UsuarioID = (int)IdNumericUpDown.Value;
@@ -149,7 +149,7 @@ namespace WindowsFormsApp1
             {
                 return;
             }
-            usuario = Llenarinfo();
+            usuario = LlenarClase();
 
             if (!UsuariosBLL.Existe((int)IdNumericUpDown.Value))
             {
