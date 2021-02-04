@@ -122,6 +122,12 @@ namespace WindowsFormsApp1
                 AliasTextBox.Focus();
                 paso = false;
             }
+            if(string.Equals(ClaveTextBox.Text, ConfirmClaveTextBox.Text) != true)
+            {
+                Errores.SetError(ConfirmClaveTextBox, "La clave es distinta");
+                ConfirmClaveTextBox.Focus();
+                paso = false;
+            }
 
             return paso;
         }
