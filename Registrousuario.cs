@@ -44,7 +44,7 @@ namespace WindowsFormsApp1
             RolComboBox.Text = "";
         }
 
-        private void mostrarinfo(Usuarios usuarios)
+        private void LlenarCampos(Usuarios usuarios)
         {
             IdNumericUpDown.Value = usuarios.UsuarioID;
             NombreTextBox.Text = usuarios.Nombres;
@@ -133,7 +133,7 @@ namespace WindowsFormsApp1
             if (usuario != null)
             {
                 MessageBox.Show("Persona Encotrada");
-                mostrarinfo(usuario);
+                LlenarCampos(usuario);
             }
             else
             {
