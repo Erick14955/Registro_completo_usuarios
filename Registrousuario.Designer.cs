@@ -238,13 +238,13 @@ namespace WindowsFormsApp1
             // 
             // FechaDateTimePicker
             // 
+            this.FechaDateTimePicker.CustomFormat = "dd / MM / yyyy";
             this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechaDateTimePicker.Location = new System.Drawing.Point(413, 49);
             this.FechaDateTimePicker.Name = "FechaDateTimePicker";
             this.FechaDateTimePicker.Size = new System.Drawing.Size(131, 23);
             this.FechaDateTimePicker.TabIndex = 39;
             this.FechaDateTimePicker.Value = new System.DateTime(2021, 1, 30, 0, 0, 0, 0);
-            this.FechaDateTimePicker.ValueChanged += new System.EventHandler(this.Fechaactual_ValueChanged);
             // 
             // labFecha
             // 

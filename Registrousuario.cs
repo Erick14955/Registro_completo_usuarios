@@ -19,11 +19,6 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void Fechaactual_ValueChanged(object sender, EventArgs e)
-        {
-            FechaDateTimePicker.CustomFormat = "dd / MM / yyyy";
-        }
-
         private void NuevoButton_Click(object sender, EventArgs e)
         {
             Borrarcampos();
