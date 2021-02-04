@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Proyecto_Registro.Entidades
 {
@@ -12,21 +13,12 @@ namespace Proyecto_Registro.Entidades
         public string Clave { get; set; }
         public string Nombres { get; set; }
         public string Email { get; set; }
-        public DateTime FechaIngreso { get; set; }
+        public DateTime FechaIngreso { get; set; } = DateTime.Now;
         public int RolID { get; set; }
         public string Alias { get; set; }
         public bool Activo { get; set; }
 
-        public Usuarios()
-        {
-            UsuarioID = 0;
-            Clave = string.Empty;
-            Nombres = string.Empty;
-            Email = string.Empty;
-            FechaIngreso = DateTime.Now;
-            RolID = 0;
-            Alias = string.Empty;
-            Activo = false;
-        }
+        [ForeignKey("RolID")]
+        public virtual Roles Rol { get; set; }
     }
 }

@@ -92,7 +92,6 @@ namespace WindowsFormsApp1
             "Administrador",
             "Ingeniero en sistemas",
             "Profesor",
-            "Desarrollador",
             "Ingeniero Civil",
             "Pintor",
             "Doctor",
@@ -102,7 +101,7 @@ namespace WindowsFormsApp1
             "Abogado"});
             this.RolComboBox.Location = new System.Drawing.Point(413, 91);
             this.RolComboBox.Name = "RolComboBox";
-            this.RolComboBox.Size = new System.Drawing.Size(131, 23);
+            this.RolComboBox.Size = new System.Drawing.Size(167, 23);
             this.RolComboBox.TabIndex = 25;
             // 
             // EmailTextBox
@@ -110,7 +109,7 @@ namespace WindowsFormsApp1
             this.EmailTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.EmailTextBox.Location = new System.Drawing.Point(413, 128);
             this.EmailTextBox.Name = "EmailTextBox";
-            this.EmailTextBox.Size = new System.Drawing.Size(199, 23);
+            this.EmailTextBox.Size = new System.Drawing.Size(167, 23);
             this.EmailTextBox.TabIndex = 24;
             // 
             // Email
@@ -176,7 +175,7 @@ namespace WindowsFormsApp1
             // 
             this.ActivoCheckBox.AutoSize = true;
             this.ActivoCheckBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ActivoCheckBox.Location = new System.Drawing.Point(303, 49);
+            this.ActivoCheckBox.Location = new System.Drawing.Point(303, 57);
             this.ActivoCheckBox.Name = "ActivoCheckBox";
             this.ActivoCheckBox.Size = new System.Drawing.Size(60, 19);
             this.ActivoCheckBox.TabIndex = 31;
@@ -186,7 +185,7 @@ namespace WindowsFormsApp1
             // ID
             // 
             this.ID.AutoSize = true;
-            this.ID.Location = new System.Drawing.Point(22, 53);
+            this.ID.Location = new System.Drawing.Point(22, 59);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(18, 15);
             this.ID.TabIndex = 32;
@@ -231,7 +230,7 @@ namespace WindowsFormsApp1
             // BuscarButton
             // 
             this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
-            this.BuscarButton.Location = new System.Drawing.Point(158, 49);
+            this.BuscarButton.Location = new System.Drawing.Point(158, 54);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(25, 25);
             this.BuscarButton.TabIndex = 38;
@@ -242,7 +241,7 @@ namespace WindowsFormsApp1
             // 
             this.FechaDateTimePicker.CustomFormat = "dd / MM / yyyy";
             this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaDateTimePicker.Location = new System.Drawing.Point(413, 49);
+            this.FechaDateTimePicker.Location = new System.Drawing.Point(413, 53);
             this.FechaDateTimePicker.Name = "FechaDateTimePicker";
             this.FechaDateTimePicker.Size = new System.Drawing.Size(131, 23);
             this.FechaDateTimePicker.TabIndex = 39;
@@ -251,7 +250,7 @@ namespace WindowsFormsApp1
             // labFecha
             // 
             this.labFecha.AutoSize = true;
-            this.labFecha.Location = new System.Drawing.Point(369, 54);
+            this.labFecha.Location = new System.Drawing.Point(369, 57);
             this.labFecha.Name = "labFecha";
             this.labFecha.Size = new System.Drawing.Size(38, 15);
             this.labFecha.TabIndex = 40;
@@ -263,7 +262,7 @@ namespace WindowsFormsApp1
             // 
             // IdNumericUpDown
             // 
-            this.IdNumericUpDown.Location = new System.Drawing.Point(84, 49);
+            this.IdNumericUpDown.Location = new System.Drawing.Point(84, 55);
             this.IdNumericUpDown.Name = "IdNumericUpDown";
             this.IdNumericUpDown.Size = new System.Drawing.Size(68, 23);
             this.IdNumericUpDown.TabIndex = 42;
@@ -274,7 +273,7 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(634, 340);
+            this.ClientSize = new System.Drawing.Size(616, 330);
             this.Controls.Add(this.IdNumericUpDown);
             this.Controls.Add(this.labFecha);
             this.Controls.Add(this.FechaDateTimePicker);

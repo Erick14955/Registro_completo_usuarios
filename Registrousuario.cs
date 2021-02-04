@@ -50,7 +50,46 @@ namespace WindowsFormsApp1
             NombreTextBox.Text = usuarios.Nombres;
             EmailTextBox.Text = usuarios.Email;
             AliasTextBox.Text = usuarios.Alias;
-            RolComboBox.Text = usuarios.RolID;
+            if(usuarios.RolID == 1)
+            {
+                RolComboBox.Text = "Administrador";
+            }
+            if(usuarios.RolID == 2)
+            {
+                RolComboBox.Text = "Ingeniero en sistemas";
+            }
+            if(usuarios.RolID == 3)
+            {
+                RolComboBox.Text = "Profesor";
+            }
+            if(usuarios.RolID == 4)
+            {
+                RolComboBox.Text = "Ingeniero Civil";
+            }
+            if(usuarios.RolID == 5)
+            {
+                RolComboBox.Text = "Pintor";
+            }
+            if(usuarios.RolID == 6)
+            {
+                RolComboBox.Text = "Doctor";
+            }
+            if(usuarios.RolID == 7)
+            {
+                RolComboBox.Text = "Bombero";
+            }
+            if(usuarios.RolID == 8)
+            {
+                RolComboBox.Text = "Mecanico";
+            }
+            if(usuarios.RolID == 9)
+            {
+                RolComboBox.Text = "Juez";
+            }
+            if(usuarios.RolID == 10)
+            {
+                RolComboBox.Text = "Abogado";
+            }
             ClaveTextBox.Text = usuarios.Clave;
             FechaDateTimePicker.Value = usuarios.FechaIngreso;
             ActivoCheckBox.Checked = usuarios.Activo;
@@ -65,7 +104,46 @@ namespace WindowsFormsApp1
             usuarios.Nombres = NombreTextBox.Text;
             usuarios.FechaIngreso = FechaDateTimePicker.Value;
             usuarios.Alias = AliasTextBox.Text;
-            usuarios.RolID = RolComboBox.Text;
+            if(RolComboBox.Text == "Administrador")
+            {
+                usuarios.RolID = 1;
+            }
+            if (RolComboBox.Text == "Ingeniero en sistemas")
+            {
+                usuarios.RolID = 2;
+            }
+            if (RolComboBox.Text == "Profesor")
+            {
+                usuarios.RolID = 3;
+            }
+            if (RolComboBox.Text == "Ingeniero Civil")
+            {
+                usuarios.RolID = 4;
+            }
+            if (RolComboBox.Text == "Pintor")
+            {
+                usuarios.RolID = 5;
+            }
+            if (RolComboBox.Text == "Doctor")
+            {
+                usuarios.RolID = 6;
+            }
+            if (RolComboBox.Text == "Bombero")
+            {
+                usuarios.RolID = 7;
+            }
+            if (RolComboBox.Text == "Mecanico")
+            {
+                usuarios.RolID = 8;
+            }
+            if (RolComboBox.Text == "Juez")
+            {
+                usuarios.RolID = 9;
+            }
+            if (RolComboBox.Text == "Abogado")
+            {
+                usuarios.RolID = 10;
+            }
             usuarios.Activo = ActivoCheckBox.Checked;
 
             return usuarios;
@@ -136,7 +214,7 @@ namespace WindowsFormsApp1
         {
             int id;
             Usuarios usuario = new Usuarios();
-            int.TryParse((int)IdNumericUpDown, out id);
+            int.TryParse(IdNumericUpDown.Text, out id);
 
             Limpiar();
 
@@ -180,7 +258,7 @@ namespace WindowsFormsApp1
         {
             Errores.Clear();
             int id;
-            int.TryParse((int)IdNumericUpDown.Value, out id);
+            int.TryParse(IdNumericUpDown.Text, out id);
             Limpiar();
             if (UsuariosBLL.Eliminar(id))
                 MessageBox.Show("Usuario eliminado correctamente", "Proceso exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
