@@ -3,6 +3,7 @@ using Proyecto_Registro.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -142,6 +143,26 @@ namespace Proyecto_Registro.BLL
             }
 
             return encontrado;
+        }
+
+        public static List<Usuarios> GetList(Expression<Func<Usuarios, bool>> criterio)
+        {
+            List<Usuarios> lista = new List<Usuarios>();
+            Contexto contexto = new Contexto();
+            try
+            {
+                lista = contexto.Usuarios.Where(criterio).ToList();
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return lista;
         }
     }
 }
