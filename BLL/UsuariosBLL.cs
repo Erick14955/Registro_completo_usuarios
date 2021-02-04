@@ -15,7 +15,7 @@ namespace Proyecto_Registro.BLL
             if (!Existe(usuario.UsuarioID))
                 return Insertar(usuario);
             else
-                return false;
+                return Modificar(usuario);
         }
 
         private static bool Insertar(Usuarios usuario)

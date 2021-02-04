@@ -150,31 +150,17 @@ namespace WindowsFormsApp1
                 return;
             }
             usuario = LlenarClase();
+            paso = UsuariosBLL.Guardar(usuario);
 
-            if (!UsuariosBLL.Existe((int)IdNumericUpDown.Value))
+            if (!ExisteEnLaBaseDeDatos())
             {
-                MessageBox.Show("Error al intentar modificar usuario, id no encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                Limpiar();
+                MessageBox.Show("Usuario guardado correctamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
-            {
-                if (!ExisteEnLaBaseDeDatos())
-                {
-                    MessageBox.Show("No es posible realizar la modificacion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                paso = UsuariosBLL.Modificar(usuario);
-            }
-
-            if (paso)
             {
                 Limpiar();
                 MessageBox.Show("Usuario modificado correctamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("No es posible realizar la modificacion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
