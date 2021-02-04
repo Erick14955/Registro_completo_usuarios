@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
 
         private void NuevoButton_Click(object sender, EventArgs e)
         {
-            Borrarcampos();
+            Limpiar();
         }
 
         private bool ExisteEnLaBaseDeDatos()
@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
             return (usuarios != null);
         }
 
-        private void Borrarcampos()
+        private void Limpiar()
         {
             IdNumericUpDown.Value = 0;
             AliasTextBox.Clear();
@@ -126,7 +126,7 @@ namespace WindowsFormsApp1
             Usuarios usuario = new Usuarios();
             int.TryParse((int)IdNumericUpDown, out id);
 
-            Borrarcampos();
+            Limpiar();
 
             usuario = UsuariosBLL.Buscar(id);
 
@@ -169,7 +169,7 @@ namespace WindowsFormsApp1
 
             if (paso)
             {
-                Borrarcampos();
+                Limpiar();
                 MessageBox.Show("Usuario modificado correctamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -183,12 +183,11 @@ namespace WindowsFormsApp1
             Errores.Clear();
             int id;
             int.TryParse((int)IdNumericUpDown.Value, out id);
-            Borrarcampos();
+            Limpiar();
             if (UsuariosBLL.Eliminar(id))
                 MessageBox.Show("Usuario eliminado correctamente", "Proceso exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 Errores.SetError(IdNumericUpDown, "ID no existente");
         }
-
     }
 }
