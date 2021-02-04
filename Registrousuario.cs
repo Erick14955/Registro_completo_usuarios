@@ -19,17 +19,12 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void Registrousuario_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Fechaactual_ValueChanged(object sender, EventArgs e)
         {
-            Fechaactual.CustomFormat = "dd / MM / yyyy";
+            FechaDateTimePicker.CustomFormat = "dd / MM / yyyy";
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void NuevoButton_Click(object sender, EventArgs e)
         {
             Usuarios usuario;
             bool paso = false;
@@ -68,39 +63,39 @@ namespace WindowsFormsApp1
         private void Borrarcampos()
         {
             TextID.Clear();
-            TextoAlias.Clear();
-            TextoNombres.Clear();
-            TextoEmail.Clear();
-            TextoClave.Clear();
-            TextoClave2.Clear();
-            Fechaactual.CustomFormat = "";
-            Activo.Checked = false;
-            comboRol.Text = "";
+            AliasTextBox.Clear();
+            NombreTextBox.Clear();
+            EmailTextBox.Clear();
+            ClaveTextBox.Clear();
+            ConfirmClaveTextBox.Clear();
+            FechaDateTimePicker.CustomFormat = "";
+            ActivoCheckBox.Checked = false;
+            RolComboBox.Text = "";
         }
 
         private void mostrarinfo(Usuarios usuarios)
         {
             TextID.Text = Convert.ToString(usuarios.UsuarioID);
-            TextoNombres.Text = usuarios.Nombres;
-            TextoEmail.Text = usuarios.Email;
-            TextoAlias.Text = usuarios.Alias;
-            comboRol.Text = usuarios.RolID;
-            TextoClave.Text = usuarios.Clave;
-            Fechaactual.Value = usuarios.FechaIngreso;
-            Activo.Checked = usuarios.Activo;
+            NombreTextBox.Text = usuarios.Nombres;
+            EmailTextBox.Text = usuarios.Email;
+            AliasTextBox.Text = usuarios.Alias;
+            RolComboBox.Text = usuarios.RolID;
+            ClaveTextBox.Text = usuarios.Clave;
+            FechaDateTimePicker.Value = usuarios.FechaIngreso;
+            ActivoCheckBox.Checked = usuarios.Activo;
         }
 
         private Usuarios Llenarinfo()
         {
             Usuarios usuarios = new Usuarios();
             usuarios.UsuarioID = Convert.ToInt32(TextID.Text);
-            usuarios.Clave = TextoClave.Text;
-            usuarios.Email = TextoEmail.Text;
-            usuarios.Nombres = TextoNombres.Text;
-            usuarios.FechaIngreso = Fechaactual.Value;
-            usuarios.Alias = TextoAlias.Text;
-            usuarios.RolID = comboRol.Text;
-            usuarios.Activo = Activo.Checked;
+            usuarios.Clave = ClaveTextBox.Text;
+            usuarios.Email = EmailTextBox.Text;
+            usuarios.Nombres = NombreTextBox.Text;
+            usuarios.FechaIngreso = FechaDateTimePicker.Value;
+            usuarios.Alias = AliasTextBox.Text;
+            usuarios.RolID = RolComboBox.Text;
+            usuarios.Activo = ActivoCheckBox.Checked;
 
             return usuarios;
         }
@@ -109,52 +104,52 @@ namespace WindowsFormsApp1
         {
             bool paso = true;
 
-            if (TextoNombres.Text == string.Empty)
+            if (NombreTextBox.Text == string.Empty)
             {
-                Errores.SetError(TextoNombres, "El campo nombre no puede estar vacio");
-                TextoNombres.Focus();
+                Errores.SetError(NombreTextBox, "El campo nombre no puede estar vacio");
+                NombreTextBox.Focus();
                 paso = false;
             }
 
-            if (string.IsNullOrWhiteSpace(comboRol.Text))
+            if (string.IsNullOrWhiteSpace(RolComboBox.Text))
             {
-                Errores.SetError(comboRol, "Debe agregar un rol especifico");
-                comboRol.Focus();
+                Errores.SetError(RolComboBox, "Debe agregar un rol especifico");
+                RolComboBox.Focus();
                 paso = false;
             }
 
-            if(TextoAlias.Text == string.Empty)
+            if(AliasTextBox.Text == string.Empty)
             {
-                Errores.SetError(TextoAlias, "El campo de alias no puede estar vacio");
-                TextoAlias.Focus();
+                Errores.SetError(AliasTextBox, "El campo de alias no puede estar vacio");
+                AliasTextBox.Focus();
                 paso = false;
             }
 
-            if(TextoClave.Text == string.Empty)
+            if(ClaveTextBox.Text == string.Empty)
             {
-                Errores.SetError(TextoClave, "El campo de clave no puede estar vacio");
-                TextoClave.Focus();
+                Errores.SetError(ClaveTextBox, "El campo de clave no puede estar vacio");
+                ClaveTextBox.Focus();
                 paso = false;
             }
 
-            if(TextoClave2.Text == string.Empty)
+            if(ConfirmClaveTextBox.Text == string.Empty)
             {
-                Errores.SetError(TextoClave2, "El campo de confirmar clave no puede estar vacio");
-                TextoClave2.Focus();
+                Errores.SetError(ConfirmClaveTextBox, "El campo de confirmar clave no puede estar vacio");
+                ConfirmClaveTextBox.Focus();
                 paso = false;
             }
 
-            if(TextoEmail.Text == string.Empty)
+            if(EmailTextBox.Text == string.Empty)
             {
-                Errores.SetError(TextoEmail, "El campo de email no puede estar vacio");
-                TextoEmail.Focus();
+                Errores.SetError(EmailTextBox, "El campo de email no puede estar vacio");
+                EmailTextBox.Focus();
                 paso = false;
             }
 
             return paso;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BuscarButton_Click(object sender, EventArgs e)
         {
             int id;
             Usuarios usuario = new Usuarios();
@@ -175,7 +170,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void GuardarButton_Click(object sender, EventArgs e)
         {
             Usuarios usuario;
             bool paso = false;
@@ -212,7 +207,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void EliminarButton_Click(object sender, EventArgs e)
         {
             Errores.Clear();
             int id;
@@ -223,5 +218,6 @@ namespace WindowsFormsApp1
             else
                 Errores.SetError(TextID, "ID no existente");
         }
+
     }
 }

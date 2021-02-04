@@ -103,9 +103,29 @@ namespace Proyecto_Registro.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap eliminar {
+            get {
+                object obj = ResourceManager.GetObject("eliminar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap networkvalidationblockblockchaintechnology_95907 {
             get {
                 object obj = ResourceManager.GetObject("networkvalidationblockblockchaintechnology_95907", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new__1_ {
+            get {
+                object obj = ResourceManager.GetObject("new (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
