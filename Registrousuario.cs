@@ -26,31 +26,7 @@ namespace WindowsFormsApp1
 
         private void NuevoButton_Click(object sender, EventArgs e)
         {
-            Usuarios usuario;
-            bool paso = false;
-            if (!Validar())
-                return;
-            usuario = Llenarinfo();
-
-            if (!UsuariosBLL.Existe((int)IdNumericUpDown.Value)){
-                if (!ExisteEnLaBaseDeDatos())
-                    paso = UsuariosBLL.Guardar(usuario);
-                else
-                {
-                    MessageBox.Show("Este usuario ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-            }
-
-            if (paso)
-            {
-                Borrarcampos();
-                MessageBox.Show("Usuario guardado correctamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Error al guardar, usuario ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            Borrarcampos();
         }
 
         private bool ExisteEnLaBaseDeDatos()
