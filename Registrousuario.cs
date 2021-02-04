@@ -116,6 +116,12 @@ namespace WindowsFormsApp1
                 EmailTextBox.Focus();
                 paso = false;
             }
+            if (UsuariosBLL.ExisteAlias(AliasTextBox.Text))
+            {
+                Errores.SetError(AliasTextBox, "Este Alias ya existe");
+                AliasTextBox.Focus();
+                paso = false;
+            }
 
             return paso;
         }

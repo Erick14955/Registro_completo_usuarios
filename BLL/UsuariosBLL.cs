@@ -123,5 +123,25 @@ namespace Proyecto_Registro.BLL
 
             return encontrado;
         }
+
+        public static bool ExisteAlias(string buscaralias)
+        {
+            Contexto contexto = new Contexto();
+            bool encontrado = false;
+            try
+            {
+                encontrado = contexto.Usuarios.Any(e => e.Alias == buscaralias);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return encontrado;
+        }
     }
 }
