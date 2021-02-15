@@ -62,7 +62,7 @@ namespace WindowsFormsApp1
             this.ConfirmClaveTextBox.Location = new System.Drawing.Point(413, 165);
             this.ConfirmClaveTextBox.Name = "ConfirmClaveTextBox";
             this.ConfirmClaveTextBox.PasswordChar = '*';
-            this.ConfirmClaveTextBox.Size = new System.Drawing.Size(144, 23);
+            this.ConfirmClaveTextBox.Size = new System.Drawing.Size(167, 23);
             this.ConfirmClaveTextBox.TabIndex = 28;
             // 
             // ConfirmClave
@@ -126,14 +126,14 @@ namespace WindowsFormsApp1
             this.ClaveTextBox.Location = new System.Drawing.Point(84, 165);
             this.ClaveTextBox.Name = "ClaveTextBox";
             this.ClaveTextBox.PasswordChar = '*';
-            this.ClaveTextBox.Size = new System.Drawing.Size(158, 23);
+            this.ClaveTextBox.Size = new System.Drawing.Size(179, 23);
             this.ClaveTextBox.TabIndex = 22;
             // 
             // NombreTextBox
             // 
             this.NombreTextBox.Location = new System.Drawing.Point(84, 125);
             this.NombreTextBox.Name = "NombreTextBox";
-            this.NombreTextBox.Size = new System.Drawing.Size(217, 23);
+            this.NombreTextBox.Size = new System.Drawing.Size(179, 23);
             this.NombreTextBox.TabIndex = 21;
             // 
             // AliasTextBox
@@ -141,7 +141,7 @@ namespace WindowsFormsApp1
             this.AliasTextBox.BackColor = System.Drawing.Color.White;
             this.AliasTextBox.Location = new System.Drawing.Point(84, 91);
             this.AliasTextBox.Name = "AliasTextBox";
-            this.AliasTextBox.Size = new System.Drawing.Size(217, 23);
+            this.AliasTextBox.Size = new System.Drawing.Size(179, 23);
             this.AliasTextBox.TabIndex = 20;
             // 
             // Clave
@@ -243,7 +243,7 @@ namespace WindowsFormsApp1
             this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechaDateTimePicker.Location = new System.Drawing.Point(413, 53);
             this.FechaDateTimePicker.Name = "FechaDateTimePicker";
-            this.FechaDateTimePicker.Size = new System.Drawing.Size(131, 23);
+            this.FechaDateTimePicker.Size = new System.Drawing.Size(167, 23);
             this.FechaDateTimePicker.TabIndex = 39;
             this.FechaDateTimePicker.Value = new System.DateTime(2021, 1, 30, 0, 0, 0, 0);
             // 
