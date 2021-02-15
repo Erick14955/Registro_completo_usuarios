@@ -187,9 +187,9 @@ namespace WindowsFormsApp1
             this.ID.AutoSize = true;
             this.ID.Location = new System.Drawing.Point(22, 59);
             this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(18, 15);
+            this.ID.Size = new System.Drawing.Size(17, 15);
             this.ID.TabIndex = 32;
-            this.ID.Text = "ID";
+            this.ID.Text = "Id";
             // 
             // NuevoButton
             // 
